@@ -55,9 +55,9 @@ String formatRwf(int amount) {
   return '$sign$out RWF';
 }
 
-// ---------------------------------------------------------------
+// --------------------------------------
 // F2 - isValidPin
-// ---------------------------------------------------------------
+// --------------------------------------
 bool isValidPin(String pin) {
   // by MMEG
   if (pin.length != 5) return false; // exactly 5 characters
