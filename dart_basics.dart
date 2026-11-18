@@ -64,8 +64,8 @@ void drawTriangle(int height) {
   while (row <= height) {
     final String symbol = row.isOdd ? '*' : '#';
     final int spaces = height - row; // the shorter the row, the more spaces before it
-    print(' ' * spaces + symbol * row);
-    row++;
+   print(List.filled(spaces, ' ').join() +
+      List.filled(row, symbol).join());
   }
 }
 
@@ -86,7 +86,9 @@ String maskPhone(String phone) {
   if (phone.length != 10) return 'INVALID';
   final String start = phone.substring(0, 3);
   final String end = phone.substring(phone.length - 2);
-  return start + '*' * (phone.length - 5) + end;
+  return start +
+    List.filled(phone.length - 5, '*').join() +
+    end;
 }
 
 // ---------------------------------------------------------------
