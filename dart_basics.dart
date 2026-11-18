@@ -66,6 +66,7 @@ void drawTriangle(int height) {
     final int spaces = height - row; // the shorter the row, the more spaces before it
    print(List.filled(spaces, ' ').join() +
       List.filled(row, symbol).join());
+    row++;
   }
 }
 
